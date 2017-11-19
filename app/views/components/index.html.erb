@@ -16,7 +16,7 @@
     <% @components.each do |component| %>
       <tr>
         <td><%= link_to (image_tag component.image_url), component_path(component) %></td>
-        <td><%= link_to component.name, component_path(component) %> (<%= component.manufacturer %>)</td>
+        <td><%= display_component(component) %></td>
         <td><%= display_size(component) %></td>
         <td><%= link_to 'Purchase', component.purchase_url, target: '_blank' %></td>
         <td><%= link_to 'Show', component %></td>

@@ -17,7 +17,7 @@
   <tbody>
     <% @prices.each do |price| %>
       <tr>
-        <td><%= link_to price.component, component_path(price.component) %> (<%= price.component.manufacturer %>)</td>
+        <td><%= display_component(price.component) %></td>
         <td><%= price.qty %></td>
         <td><%= display_currency(price.cost_each) %></td>
         <td><%= display_currency(price.shipping_each) %></td>
