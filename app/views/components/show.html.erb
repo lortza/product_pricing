@@ -17,15 +17,19 @@
 </p>
 
 <p><strong>Prices</strong></p>
-<table>
+<table class="table">
   <tr>
     <th>Qty</th>
-    <th>Cost Each</th>
+    <th>Price Ea.</th>
+    <th>Shipping Ea.</th>
+    <th>Total Cost Ea.</th>
     <th>Cost for Qty</th>
   </tr>
-  <% @component.prices.each do |price| %>
+  <% @component.prices.order('qty').each do |price| %>
   <tr>
     <td><%= price.qty %></td>
+    <td><%= display_currency(price.cost_each) %></td>
+    <td><%= display_currency(price.shipping_each) %></td>
     <td><%= display_currency(price.total_cost) %></td>
     <td><%= display_currency(price.cost_for_qty) %></td>
   </tr>
