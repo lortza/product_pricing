@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ProductPricing</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <nav>
+      <%= link_to "Components", components_path %> |
+      <%= link_to "Manufacturers", manufacturers_path %> |
+      <%= link_to "Prices", prices_path %> |
+    </nav>
+    <p id="notice"><%= notice %></p>
+    <%= yield %>
+  </body>
+</html>

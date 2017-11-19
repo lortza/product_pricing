@@ -1,0 +1,24 @@
+
+
+<p>
+  <strong>Component:</strong>
+  <%= @price.component %>
+</p>
+
+<p>
+  <strong>Qty:</strong>
+  <%= @price.qty %>
+</p>
+
+<p>
+  <strong>Cost each:</strong>
+  <%= @price.cost_each %>
+</p>
+
+<p>
+  <strong>Shipping each:</strong>
+  <%= @price.shipping_each %>
+</p>
+
+<%= link_to 'Edit', edit_price_path(@price) %> |
+<%= link_to 'Back', prices_path %>

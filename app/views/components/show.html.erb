@@ -1,0 +1,34 @@
+
+
+<p>
+  <strong>Manufacturer:</strong>
+  <%= link_to @component.manufacturer, @component.purchase_url, target: "_blank" %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @component.name %>
+</p>
+
+<p>
+  <strong>Height in:</strong>
+  <%= @component.height_in %>
+</p>
+
+<p>
+  <strong>Width in:</strong>
+  <%= @component.width_in %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @component.image_url %>
+</p>
+
+<p>
+  <strong>Purchase url:</strong>
+  <%= @component.purchase_url %>
+</p>
+
+<%= link_to 'Edit', edit_component_path(@component) %> |
+<%= link_to 'Back', components_path %>

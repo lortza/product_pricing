@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  manufacturer: one
+  name: MyString
+  height_in: 1.5
+  width_in: 1.5
+  image_url: MyString
+  purchase_url: MyString
+
+two:
+  manufacturer: two
+  name: MyString
+  height_in: 1.5
+  width_in: 1.5
+  image_url: MyString
+  purchase_url: MyString

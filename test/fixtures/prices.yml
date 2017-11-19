@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  component: one
+  qty: 1
+  cost_each: 1.5
+  shipping_each: 1.5
+
+two:
+  component: two
+  qty: 1
+  cost_each: 1.5
+  shipping_each: 1.5
