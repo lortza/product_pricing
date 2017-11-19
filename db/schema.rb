@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171119145608) do
+ActiveRecord::Schema.define(version: 20171119212204) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "component_products", force: :cascade do |t|
+    t.integer  "qty"
+    t.integer  "component_id"
+    t.integer  "product_id"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.index ["component_id"], name: "index_component_products_on_component_id", using: :btree
+    t.index ["product_id"], name: "index_component_products_on_product_id", using: :btree
+  end
 
   create_table "components", force: :cascade do |t|
     t.integer  "manufacturer_id"
@@ -44,6 +54,16 @@ ActiveRecord::Schema.define(version: 20171119145608) do
     t.index ["component_id"], name: "index_prices_on_component_id", using: :btree
   end
 
+  create_table "products", force: :cascade do |t|
+    t.string   "name"
+    t.float    "msrp"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "qty"
+  end
+
+  add_foreign_key "component_products", "components"
+  add_foreign_key "component_products", "products"
   add_foreign_key "components", "manufacturers"
   add_foreign_key "prices", "components"
 end

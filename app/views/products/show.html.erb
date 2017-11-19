@@ -1,0 +1,48 @@
+<p>
+  <strong>Name:</strong>
+  <%= @product.name %>
+</p>
+
+<p>
+  <strong>MSRP:</strong>
+  <%= display_currency(@product.msrp) %>
+</p>
+
+<p>
+  <strong>Qty:</strong>
+  <%= @product.qty %>
+</p>
+
+<p>
+  <strong>Total Cost:</strong>
+  <%= display_currency(@product.total_cost) %>
+</p>
+
+<p>
+  <strong>Profit:</strong>
+  <%= display_currency(@product.profit) %>
+</p>
+
+
+<p>
+  <strong>Components:</strong>
+</p>
+
+<table class="table">
+  <tr>
+    <th>Qty</th>
+    <th>Name</th>
+    <th>Cost for this Qty</th>
+  </tr>
+  <% @product.components.each do |component| %>
+    <tr>
+      <td>qty tbd</td>
+      <td><%= component.full_name %></td>
+      <td><%= display_currency(component.cost_for_qty(@product.qty)) %></td>
+    </tr>
+  <% end %>
+</table>
+
+
+<%= link_to 'Edit', edit_product_path(@product) %> |
+<%= link_to 'Back', products_path %>

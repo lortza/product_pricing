@@ -9,4 +9,8 @@ class Price < ApplicationRecord
     total_cost * qty
   end
 
+  def self.nearest(qty)
+    last
+  end
+
 end
