@@ -1,6 +1,6 @@
 module PricesHelper
 
   def display_currency(price)
-    "$#{price.round(2)}"
+    price ? "$#{price.round(2)}" : "Shipping Required"
   end
 end

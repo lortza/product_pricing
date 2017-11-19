@@ -4,7 +4,7 @@ class PricesController < ApplicationController
   # GET /prices
   # GET /prices.json
   def index
-    @prices = Price.all
+    @prices = Price.all.order('component_id')
   end
 
   # GET /prices/1
