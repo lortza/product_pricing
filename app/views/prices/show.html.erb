@@ -1,8 +1,9 @@
 
+<%= image_tag @price.component.image_url %>
 
 <p>
   <strong>Component:</strong>
-  <%= @price.component %>
+  <%= @price.component %> (<%= @price.component.manufacturer %>)
 </p>
 
 <p>
@@ -12,13 +13,19 @@
 
 <p>
   <strong>Cost each:</strong>
-  <%= @price.cost_each %>
+  <%= display_currency(@price.cost_each) %>
 </p>
 
 <p>
   <strong>Shipping each:</strong>
-  <%= @price.shipping_each %>
+  <%= display_currency(@price.shipping_each) %>
+</p>
+
+<p>
+  <strong>Cost for this Qty:</strong>
+  <%= display_currency(@price.cost_for_qty) %>
 </p>
 
 <%= link_to 'Edit', edit_price_path(@price) %> |
-<%= link_to 'Back', prices_path %>
+<%= link_to 'Back', prices_path %> |
+<%= link_to 'New Price', new_price_path %>

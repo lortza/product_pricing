@@ -1,29 +1,22 @@
-
-
 <h1>Components</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Manufacturer</th>
+      <th></th>
       <th>Name</th>
-      <th>Height in</th>
-      <th>Width in</th>
-      <th>Image url</th>
-      <th>Purchase url</th>
-      <th colspan="3"></th>
+      <th>Size</th>
+      <th colspan="4">Actions</th>
     </tr>
   </thead>
 
   <tbody>
     <% @components.each do |component| %>
       <tr>
-        <td><%= component.manufacturer %></td>
-        <td><%= component.name %></td>
-        <td><%= component.height_in %></td>
-        <td><%= component.width_in %></td>
-        <td><%= component.image_url %></td>
-        <td><%= component.purchase_url %></td>
+        <td><%= link_to (image_tag component.image_url), component_path(component) %></td>
+        <td><%= link_to component.name, component_path(component) %> (<%= component.manufacturer %>)</td>
+        <td><%= display_size(component) %></td>
+        <td><%= link_to 'Purchase', component.purchase_url, target: '_blank' %></td>
         <td><%= link_to 'Show', component %></td>
         <td><%= link_to 'Edit', edit_component_path(component) %></td>
         <td><%= link_to 'Destroy', component, method: :delete, data: { confirm: 'Are you sure?' } %></td>

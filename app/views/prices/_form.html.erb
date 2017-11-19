@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :component_id %>
-    <%= f.text_field :component_id %>
+    <%= f.grouped_collection_select :component_id, Manufacturer.includes(:components).order('id'), :components, :name, :id, :name, prompt: "-- Select a Component --" %>
   </div>
 
   <div class="field">

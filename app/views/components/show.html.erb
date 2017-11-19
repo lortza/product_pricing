@@ -1,9 +1,4 @@
-
-
-<p>
-  <strong>Manufacturer:</strong>
-  <%= link_to @component.manufacturer, @component.purchase_url, target: "_blank" %>
-</p>
+<%= image_tag @component.image_url %>
 
 <p>
   <strong>Name:</strong>
@@ -11,24 +6,31 @@
 </p>
 
 <p>
-  <strong>Height in:</strong>
-  <%= @component.height_in %>
+  <strong>Manufacturer:</strong>
+  <%= link_to @component.manufacturer, @component.purchase_url, target: "_blank" %><br>
+  <%= link_to "Purchase here", @component.purchase_url, target: "_blank" %>
 </p>
 
 <p>
-  <strong>Width in:</strong>
-  <%= @component.width_in %>
+  <strong>Size:</strong>
+  <%= @component.height_in %>" x <%= @component.width_in %>"
 </p>
 
-<p>
-  <strong>Image url:</strong>
-  <%= @component.image_url %>
-</p>
-
-<p>
-  <strong>Purchase url:</strong>
-  <%= @component.purchase_url %>
-</p>
+<p><strong>Prices</strong></p>
+<table>
+  <tr>
+    <th>Qty</th>
+    <th>Cost Each</th>
+    <th>Cost for Qty</th>
+  </tr>
+  <% @component.prices.each do |price| %>
+  <tr>
+    <td><%= price.qty %></td>
+    <td><%= display_currency(price.total_cost) %></td>
+    <td><%= display_currency(price.cost_for_qty) %></td>
+  </tr>
+  <% end %>
+</table>
 
 <%= link_to 'Edit', edit_component_path(@component) %> |
 <%= link_to 'Back', components_path %>

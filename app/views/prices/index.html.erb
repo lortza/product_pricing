@@ -16,7 +16,7 @@
   <tbody>
     <% @prices.each do |price| %>
       <tr>
-        <td><%= price.component %></td>
+        <td><%= price.component %> (<%= price.component.manufacturer %>)</td>
         <td><%= price.qty %></td>
         <td><%= price.cost_each %></td>
         <td><%= price.shipping_each %></td>
