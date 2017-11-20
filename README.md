@@ -1,24 +1,30 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is an app to calculate pricing and profit across different manufacturers for a physical product I make.
 
-Things you may want to cover:
+## Project Status
 
-* Ruby version
+WIP
 
-* System dependencies
+### To Do
 
-* Configuration
+- Devise
+- Seeds
+- Generate better profit comparison reporting cross manufacturers
+- Build in qty per component within a product
+- Fine-tune flow between views
+- Any design whatsoever
 
-* Database creation
+### Complete
 
-* Database initialization
+- Basic MVC and db relationships for manufacturers, components, pricing, products
+- Install Bootstrap
+- Test out functionality as a user
 
-* How to run the test suite
+## Tech Stats
 
-* Services (job queues, cache servers, search engines, etc.)
+* Ruby '2.4.2'
 
-* Deployment instructions
+* Rails '~> 5.0.6'
 
-* ...
+* PostgreSql '~> 0.18'
