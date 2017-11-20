@@ -18,7 +18,12 @@ This is a functioning local version that requires a little more work before MVP.
 
 ### Complete
 
-- Basic MVC and db relationships for manufacturers, components, pricing, products
+- Basic MVC and db relationships for
+  - manufacturers
+  - components
+  - pricing
+  - products
+- Join table and relationships for components_products
 - Install Bootstrap
 - Test out functionality as a user
 
