@@ -2,12 +2,13 @@
 
 This is an app to calculate pricing and profit across different manufacturers for a physical product I make.
 
-## Project Status
+## Project Status: WIP
 
-WIP
+This is a functioning local version that requires a little more work before MVP.
 
 ### To Do
 
+- Nested routing (shallow)
 - Devise
 - Seeds
 - Generate better profit comparison reporting cross manufacturers
