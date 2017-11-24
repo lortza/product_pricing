@@ -23,7 +23,7 @@ class Product < ApplicationRecord
   end
 
   def msrp
-    (local_msrp != nil && local_msrp != 0) ? local_msrp : GlobalMsrp.first.price
+    (local_msrp != nil && local_msrp != 0) ? local_msrp : ApplicationHelper::GLOBAL_MSRP.price
   end
 
 end

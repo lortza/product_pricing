@@ -17,8 +17,8 @@
   </div>
 
   <div class="field">
-    <%= f.label :local_msrp, "Override MSRP" %>
-    <%= f.text_field :local_msrp, value: 19.99, class: 'form-control' %>
+    <%= f.label :local_msrp, "Override Global MSRP (currently $#{global_msrp.price})" %>
+    <%= f.text_field :local_msrp, class: 'form-control' %>
   </div>
 
   <div class="field">
