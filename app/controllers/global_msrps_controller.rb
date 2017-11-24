@@ -1,8 +1,5 @@
 class GlobalMsrpsController < ApplicationController
-  before_action :set_global_msrp, only: [:show, :edit, :update, :destroy]
-
-  def show
-  end
+  before_action :set_global_msrp, only: [:edit, :update, :destroy]
 
   # GET /global_msrps/1/edit
   def edit

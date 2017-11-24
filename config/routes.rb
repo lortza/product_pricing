@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root 'products#index'
-  resources :global_msrps, only: [:show, :edit, :update]
+  resources :global_msrps, only: [:edit, :update]
   resources :products
   resources :prices
   resources :components
