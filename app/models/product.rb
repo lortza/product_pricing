@@ -2,7 +2,7 @@ class Product < ApplicationRecord
   has_many :component_products, dependent: :destroy
   has_many :components, through: :component_products
 
-  def cost_each
+  def unit_cost
     total_cost / qty
   end
 
@@ -13,11 +13,13 @@ class Product < ApplicationRecord
     prices.reduce(&:+)
   end
 
-  def profit
+  def unit_profit
+    total_profit / qty
+  end
+
+  def total_profit
     potential = msrp * qty
     potential - total_cost
   end
-
-
 
 end

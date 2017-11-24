@@ -9,7 +9,8 @@
       <th>MSRP</th>
       <th>Qty</th>
       <th>Cost Ea.</th>
-      <th>Profit</th>
+      <th>Profit Ea.</th>
+      <th>Total Profit</th>
     </tr>
   </thead>
 
@@ -24,8 +25,9 @@
         </td>
         <td><%= product.msrp %></td>
         <td><%= product.qty %></td>
-        <td><%= display_currency(product.cost_each) %></td>
-        <td><%= display_currency(product.profit) %></td>
+        <td><%= display_currency(product.unit_cost) %></td>
+        <td><%= display_currency(product.unit_profit) %></td>
+        <td><%= display_currency(product.total_profit) %></td>
       </tr>
     <% end %>
   </tbody>
