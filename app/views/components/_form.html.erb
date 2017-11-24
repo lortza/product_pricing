@@ -13,32 +13,32 @@
 
   <div class="field">
     <%= f.label :manufacturer_id %>
-    <%= f.collection_select :manufacturer_id, Manufacturer.all, :id, :name %>
+    <%= f.collection_select :manufacturer_id, Manufacturer.all, :id, :name, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :height_in %>
-    <%= f.text_field :height_in %>
+    <%= f.text_field :height_in, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :width_in %>
-    <%= f.text_field :width_in %>
+    <%= f.text_field :width_in, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :image_url %>
-    <%= f.text_field :image_url %>
+    <%= f.text_field :image_url, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :purchase_url %>
-    <%= f.text_field :purchase_url %>
+    <%= f.text_field :purchase_url, class: 'form-control' %>
   </div>
 
   <div class="actions">

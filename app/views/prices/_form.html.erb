@@ -13,22 +13,22 @@
 
   <div class="field">
     <%= f.label :component_id %>
-    <%= f.grouped_collection_select :component_id, Manufacturer.includes(:components).order('id'), :components, :name, :id, :name, prompt: "-- Select a Component --" %>
+    <%= f.grouped_collection_select :component_id, Manufacturer.includes(:components).order('id'), :components, :name, :id, :name, prompt: "-- Select a Component --", class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :qty %>
-    <%= f.number_field :qty %>
+    <%= f.number_field :qty, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :cost_each %>
-    <%= f.text_field :cost_each %>
+    <%= f.text_field :cost_each, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :shipping_each %>
-    <%= f.text_field :shipping_each %>
+    <%= f.text_field :shipping_each, class: 'form-control' %>
   </div>
 
   <div class="actions">
