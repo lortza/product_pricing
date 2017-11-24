@@ -22,4 +22,8 @@ class Product < ApplicationRecord
     potential - total_cost
   end
 
+  def msrp
+    (local_msrp != nil && local_msrp != 0) ? local_msrp : GlobalMsrp.first.price
+  end
+
 end

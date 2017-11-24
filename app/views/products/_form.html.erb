@@ -13,22 +13,26 @@
 
   <div class="field">
     <%= f.label :name %>
-    <%= f.text_field :name %>
+    <%= f.text_field :name, class: 'form-control' %>
   </div>
 
   <div class="field">
-    <%= f.label :msrp, "MSRP" %>
-    <%= f.text_field :msrp, value: 19.99 %>
+    <%= f.label :local_msrp, "Override MSRP" %>
+    <%= f.text_field :local_msrp, value: 19.99, class: 'form-control' %>
   </div>
 
   <div class="field">
     <%= f.label :qty %>
-    <%= f.number_field :qty %>
+    <%= f.number_field :qty, class: 'form-control' %>
   </div>
 
   <div class="field">
-    <%= f.label :component_ids, "Components" %>
-    <%= f.collection_check_boxes(:component_ids, Component.all.order(name: :asc), :id, :full_name) %>
+    <%= f.label :component_ids, "Components" %><br>
+    <%= f.collection_check_boxes(:component_ids, Component.all.order(name: :asc), :id, :full_name) do |c| %>
+      <%= c.label class: "label-checkbox" do %>
+        <%= c.check_box + c.text %>
+      <% end %>
+    <% end %>
   </div>
 
   <div class="actions">

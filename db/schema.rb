@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171119212204) do
+ActiveRecord::Schema.define(version: 20171124165359) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,6 +37,12 @@ ActiveRecord::Schema.define(version: 20171119212204) do
     t.index ["manufacturer_id"], name: "index_components_on_manufacturer_id", using: :btree
   end
 
+  create_table "global_msrps", force: :cascade do |t|
+    t.float    "price"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "manufacturers", force: :cascade do |t|
     t.string   "name"
     t.string   "url"
@@ -56,7 +62,7 @@ ActiveRecord::Schema.define(version: 20171119212204) do
 
   create_table "products", force: :cascade do |t|
     t.string   "name"
-    t.float    "msrp"
+    t.float    "local_msrp"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer  "qty"

@@ -1,0 +1,2 @@
+module GlobalMsrpsHelper
+end

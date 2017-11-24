@@ -1,0 +1,2 @@
+class GlobalMsrp < ApplicationRecord
+end
