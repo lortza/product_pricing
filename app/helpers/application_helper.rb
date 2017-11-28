@@ -1,9 +1,8 @@
 module ApplicationHelper
 
-  GLOBAL_MSRP = GlobalMsrp.first
-
   def global_msrp
-    GLOBAL_MSRP
+    # also defined separately in the GlobalMsrp model
+    GlobalMsrp.first
   end
 
 end

@@ -67,6 +67,11 @@ class ProductsController < ApplicationController
       @product = Product.find(params[:id])
     end
 
+    def global_msrp_price
+      GlobalMsrp.price
+    end
+    helper_method :global_msrp_price
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
       params.require(:product).permit(:name, :local_msrp, :qty, component_ids: [])
