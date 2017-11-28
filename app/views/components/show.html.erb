@@ -1,23 +1,20 @@
-<%= image_tag @component.image_url %>
+<h1><%= @component.name %></h1>
 
-<p>
-  <strong>Name:</strong>
-  <%= @component.name %>
-</p>
+<div class="row">
+  <div class="col-6">
+    <%= image_tag @component.image_url %>
+  </div> <!-- col-6 -->
+  <div class="col-6">
+    <p><strong>Dimensions:</strong>  <%= @component.height_in %>" x <%= @component.width_in %>"</p>
+  </div> <!-- col-6 -->
+</div> <!-- row -->
 
-<p>
-  <strong>Manufacturer:</strong>
-  <%= link_to @component.manufacturer, @component.purchase_url, target: "_blank" %><br>
-  <%= link_to "Purchase here", @component.purchase_url, target: "_blank" %>
-</p>
-
-<p>
-  <strong>Size:</strong>
-  <%= @component.height_in %>" x <%= @component.width_in %>"
-</p>
-
-<p><strong>Prices</strong></p>
-<%= link_to 'New Price', new_price_path %>
+<p class="text-right"><%= link_to '+ New Price', new_price_path %></p>
+<h3>Prices by Manufacturer</h3>
+<h4>
+  <%= link_to @component.manufacturer, @component.purchase_url, target: "_blank" %> 
+  (<%= link_to "Purchase here", @component.purchase_url, target: "_blank" %>)
+</h4>
 <table class="table">
   <tr>
     <th>Qty</th>
