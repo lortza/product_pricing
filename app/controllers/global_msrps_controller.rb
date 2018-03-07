@@ -1,12 +1,9 @@
 class GlobalMsrpsController < ApplicationController
   before_action :set_global_msrp, only: [:edit, :update, :destroy]
 
-  # GET /global_msrps/1/edit
   def edit
   end
 
-  # PATCH/PUT /global_msrps/1
-  # PATCH/PUT /global_msrps/1.json
   def update
     respond_to do |format|
       if @global_msrp.update(global_msrp_params)
@@ -19,8 +16,6 @@ class GlobalMsrpsController < ApplicationController
     end
   end
 
-  # DELETE /global_msrps/1
-  # DELETE /global_msrps/1.json
   def destroy
     @global_msrp.destroy
     respond_to do |format|
@@ -30,12 +25,10 @@ class GlobalMsrpsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_global_msrp
       @global_msrp = GlobalMsrp.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def global_msrp_params
       params.require(:global_msrp).permit(:price)
     end

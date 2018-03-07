@@ -1,28 +1,20 @@
 class ManufacturersController < ApplicationController
   before_action :set_manufacturer, only: [:show, :edit, :update, :destroy]
 
-  # GET /manufacturers
-  # GET /manufacturers.json
   def index
     @manufacturers = Manufacturer.all
   end
 
-  # GET /manufacturers/1
-  # GET /manufacturers/1.json
   def show
   end
 
-  # GET /manufacturers/new
   def new
     @manufacturer = Manufacturer.new
   end
 
-  # GET /manufacturers/1/edit
   def edit
   end
 
-  # POST /manufacturers
-  # POST /manufacturers.json
   def create
     @manufacturer = Manufacturer.new(manufacturer_params)
 
@@ -37,8 +29,6 @@ class ManufacturersController < ApplicationController
     end
   end
 
-  # PATCH/PUT /manufacturers/1
-  # PATCH/PUT /manufacturers/1.json
   def update
     respond_to do |format|
       if @manufacturer.update(manufacturer_params)
@@ -51,8 +41,6 @@ class ManufacturersController < ApplicationController
     end
   end
 
-  # DELETE /manufacturers/1
-  # DELETE /manufacturers/1.json
   def destroy
     @manufacturer.destroy
     respond_to do |format|
@@ -62,12 +50,10 @@ class ManufacturersController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
     def set_manufacturer
       @manufacturer = Manufacturer.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def manufacturer_params
       params.require(:manufacturer).permit(:name, :url)
     end
