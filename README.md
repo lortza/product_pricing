@@ -1,5 +1,7 @@
 # Product Pricing
 
+[![Maintainability](https://api.codeclimate.com/v1/badges/ab588baa024de343777e/maintainability)](https://codeclimate.com/github/lortza/product_pricing/maintainability)
+
 This is an app to calculate pricing and profit across different manufacturers for a physical product I make.
 
 ## Tech Stats
@@ -8,8 +10,6 @@ This is an app to calculate pricing and profit across different manufacturers fo
 * PostgreSql '~> 0.18'
 
 ## Project Status: WIP
-[![Maintainability](https://api.codeclimate.com/v1/badges/ab588baa024de343777e/maintainability)](https://codeclimate.com/github/lortza/product_pricing/maintainability) <-- pesky Rails controller action duplication
-
 This is a functioning local version that requires a little more work before MVP.
 
 ### To Do
